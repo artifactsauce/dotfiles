@@ -1,0 +1,31 @@
+# .bashrc.d/mac
+
+alias emacs="/Applications/Emacs.app/Contents/MacOS/Emacs -nw"
+
+PATH="/opt/X11/bin:/usr/local/opt/coreutils/libexec/gnubin:$PATH"
+MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
+
+if [ -n `which brew` ]; then
+  BREW_PREFIX=`brew --prefix`
+  [[ -f ~/.bashrc.d/hidden/homebrew ]] && . ~/.bashrc.d/hidden/homebrew
+
+  if [ -d "$BREW_PREFIX/opt/android-sdk" ]; then
+    export ANDROID_SDK_ROOT=$BREW_PREFIX/opt/android-sdk
+  fi
+
+  if [ -s "$BREW_PREFIX/bin/src-hilite-lesspipe.sh" ]; then
+    export LESS='-R'
+    export LESSOPEN='| '$BREW_PREFIX/bin/src-hilite-lesspipe.sh' %s'
+  fi
+
+  if [ -s "$BREW_PREFIX/etc/bash_completion" ]; then
+    . "$BREW_PREFIX/etc/bash_completion"
+  fi
+
+  if [ -s "$BREW_PREFIX/etc/profile.d/z.sh" ]; then
+    . $BREW_PREFIX/etc/profile.d/z.sh
+    function precmd () {
+      z --add "$(pwd -P)"
+    }
+  fi
+fi

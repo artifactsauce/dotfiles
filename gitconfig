@@ -1,0 +1,29 @@
+[user]
+	name = Kenji Akiyama
+	email = artifactsauce@gmail.com
+[core]
+	excludesfile = ~/.gitignore
+	editor = vi
+	attributesfile = ~/.gitattributes
+[apply]
+	whitespace = nowarn
+[alias]
+	co = checkout
+	cm = commit
+	st = status
+	br = branch
+	mr = merge
+	df = diff
+[color]
+	branch = auto
+	diff = auto
+	grep = auto
+	interactive = auto
+	status = auto
+[credential]
+	helper = cache
+[push]
+	default = simple
+[filter "media"]
+	clean = git-media-clean %f
+	smudge = git-media-smudge %f

@@ -1,0 +1,15 @@
+*.rb diff=ruby
+*.pl diff=perl
+*.pm diff=perl
+*.py diff=python
+*.php diff=php
+*.html diff=html
+*.tex diff=tex
+*.c diff=cpp
+*.h diff=cpp
+*.cpp diff=cpp
+*.hpp diff=cpp
+*.m diff=objc
+*.java diff=java
+*.t diff=perl
+*.js diff=java
