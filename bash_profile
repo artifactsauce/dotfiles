@@ -22,8 +22,8 @@ esac
 export GOPATH=$HOME/develop
 PATH=$HOME/.emacs.d/.cask/bin:$HOME/develop/bin:$HOME/local/bin:$HOME/bin:$PATH
 
-eval "$(pyenv init -)"
-eval "$(rbenv init -)"
+which -s pyenv && eval "$(pyenv init -)"
+which -s rbenv && eval "$(rbenv init -)"
 [[ -s "$HOME/.nvm/nvm.sh" ]] && . "$HOME/.nvm/nvm.sh" && nvm use default > /dev/null
 [[ -r $NVM_DIR/bash_completion ]] && . $NVM_DIR/bash_completion
 [[ -s "$HOME/.perlbrew/etc/bashrc" ]] && . "$HOME/.perlbrew/etc/bashrc"
