@@ -28,4 +28,11 @@ if [ -n `which brew` ]; then
       z --add "$(pwd -P)"
     }
   fi
+
+  if [ -n $(type -t nvm) ]; then
+     . $BREW_PREFIX/nvm.sh
+     export NVM_DIR=~/.nvm
+     [[ -r $NVM_DIR/bash_completion ]] && . $NVM_DIR/bash_completion
+     nvm use default > /dev/null
+  fi
 fi
