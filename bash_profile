@@ -19,8 +19,10 @@ case `uname` in
          *) echo "Unexpected system name: `uname`";;
 esac
 
-export GOPATH=$HOME/develop
-PATH=$HOME/.emacs.d/.cask/bin:$HOME/develop/bin:$HOME/local/bin:$HOME/bin:$PATH
+export GOPATH=$HOME
+PATH=$HOME/local/bin:$HOME/bin:$PATH
+PATH=$HOME/.emacs.d/.cask/bin:$PATH
+PATH=$HOME/src/bitbucket.org/artifactsauce/home-bin:$PATH
 
 [[ -n $(type -t pyenv) ]] && eval "$(pyenv init -)"
 [[ -n $(type -t rbenv) ]] && eval "$(rbenv init -)"
