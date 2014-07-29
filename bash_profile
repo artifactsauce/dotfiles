@@ -22,7 +22,7 @@ esac
 export GOPATH=$HOME
 PATH=$HOME/local/bin:$HOME/bin:$PATH
 PATH=$HOME/.emacs.d/.cask/bin:$PATH
-PATH=$HOME/src/bitbucket.org/artifactsauce/home-bin:$PATH
+PATH=$HOME/src/bitbucket.org/artifactsauce/proglets/bin:$PATH
 
 [[ -n $(type -t pyenv) ]] && eval "$(pyenv init -)"
 [[ -n $(type -t rbenv) ]] && eval "$(rbenv init -)"
