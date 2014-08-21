@@ -5,7 +5,7 @@ alias emacs="/Applications/Emacs.app/Contents/MacOS/Emacs -nw"
 PATH="/opt/X11/bin:/usr/local/opt/coreutils/libexec/gnubin:$PATH"
 MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
 
-if [ -n `which brew` ]; then
+if which -s brew; then
   BREW_PREFIX=`brew --prefix`
   [[ -f ~/.bashrc.d/hidden/homebrew ]] && . ~/.bashrc.d/hidden/homebrew
 
@@ -29,7 +29,7 @@ if [ -n `which brew` ]; then
     }
   fi
 
-  if [ -n $(type -t nvm) ]; then
+  if which -s nvm; then
      . $BREW_PREFIX/opt/nvm/nvm.sh
      export NVM_DIR=~/.nvm
      [[ -r $NVM_DIR/bash_completion ]] && . $NVM_DIR/bash_completion
