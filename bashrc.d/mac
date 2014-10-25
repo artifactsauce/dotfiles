@@ -1,7 +1,5 @@
 # .bashrc.d/mac
 
-alias emacs="/Applications/Emacs.app/Contents/MacOS/Emacs -nw"
-
 PATH="/opt/X11/bin:/usr/local/opt/coreutils/libexec/gnubin:$PATH"
 MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
 

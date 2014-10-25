@@ -21,7 +21,6 @@ esac
 
 export GOPATH=$HOME
 PATH=$HOME/local/bin:$HOME/bin:$PATH
-PATH=$HOME/.cask/bin:$PATH
 PATH=$HOME/src/github.com/artifactsauce/proglets/bin:$PATH
 
 [[ -n $(type -t pyenv) ]] && eval "$(pyenv init -)"
