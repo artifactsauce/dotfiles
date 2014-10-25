@@ -27,3 +27,6 @@ PATH=$HOME/src/github.com/artifactsauce/proglets/bin:$PATH
 [[ -n $(type -t pyenv) ]] && eval "$(pyenv init -)"
 [[ -n $(type -t rbenv) ]] && eval "$(rbenv init -)"
 [[ -s "$HOME/.perlbrew/etc/bashrc" ]] && . "$HOME/.perlbrew/etc/bashrc"
+
+source '/Users/artifactsauce/google-cloud-sdk/path.bash.inc'
+source '/Users/artifactsauce/google-cloud-sdk/completion.bash.inc'
