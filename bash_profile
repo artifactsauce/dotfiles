@@ -12,6 +12,8 @@ GREP_OPTIONS='--color=auto'
 
 alias ls="ls --color"
 alias be="bundle exec"
+alias gsskt='PWD="~/src/github.com/howtv/gsskt_tool" be ./gsskt.rb'
+alias g="gsskt"
 
 case `uname` in
   "Darwin") [[ -f ~/.bashrc.d/mac ]] && . ~/.bashrc.d/mac;;
