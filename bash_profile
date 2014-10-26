@@ -27,5 +27,5 @@ PATH=$HOME/src/github.com/artifactsauce/proglets/bin:$PATH
 [[ -n $(type -t rbenv) ]] && eval "$(rbenv init -)"
 [[ -s "$HOME/.perlbrew/etc/bashrc" ]] && . "$HOME/.perlbrew/etc/bashrc"
 
-source '/Users/artifactsauce/google-cloud-sdk/path.bash.inc'
-source '/Users/artifactsauce/google-cloud-sdk/completion.bash.inc'
+source "$HOME/google-cloud-sdk/path.bash.inc"
+source "$HOME/google-cloud-sdk/completion.bash.inc"
