@@ -19,6 +19,8 @@ case `uname` in
          *) echo "Unexpected system name: `uname`";;
 esac
 
+[[ -d ~/.bashrc.d/hidden ]] && . ~/.bashrc.d/hidden/*
+
 export GOPATH=$HOME
 PATH=$HOME/local/bin:$HOME/bin:$PATH
 PATH=$HOME/src/github.com/artifactsauce/proglets/bin:$PATH
