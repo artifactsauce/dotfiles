@@ -5,7 +5,7 @@ MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
 
 if which -s brew; then
   BREW_PREFIX=`brew --prefix`
-  [[ -f ~/.bashrc.d/hidden/homebrew ]] && . ~/.bashrc.d/hidden/homebrew
+  [[ -d ~/.bashrc.d/hidden ]] && . ~/.bashrc.d/hidden/*
 
   if [ -d "$BREW_PREFIX/opt/android-sdk" ]; then
     export ANDROID_SDK_ROOT=$BREW_PREFIX/opt/android-sdk
