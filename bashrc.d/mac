@@ -30,7 +30,6 @@ if which -s brew; then
   if [ -f $BREW_PREFIX/opt/nvm/nvm.sh ]; then
      source $(brew --prefix nvm)/nvm.sh
      export NVM_DIR=~/.nvm
-     [[ -r $NVM_DIR/bash_completion ]] && . $NVM_DIR/bash_completion
      nvm use default > /dev/null
   fi
 fi
