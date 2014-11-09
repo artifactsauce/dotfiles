@@ -1,0 +1,15 @@
+alias git=hub
+alias emacs="/usr/local/bin/emacs -nw"
+
+export GOPATH=$HOME
+PATH=$HOME/local/bin:$HOME/bin:$PATH
+PATH=$HOME/src/github.com/artifactsauce/proglets/bin:$PATH
+
+if [ -d "$HOME/google-cloud-sdk" ]; then
+    source "$HOME/google-cloud-sdk/path.bash.inc"
+    source "$HOME/google-cloud-sdk/completion.bash.inc"
+fi
+
+[[ -n $(type -t pyenv) ]] && eval "$(pyenv init -)"
+[[ -n $(type -t rbenv) ]] && eval "$(rbenv init -)"
+[[ -s "$HOME/.perlbrew/etc/bashrc" ]] && . "$HOME/.perlbrew/etc/bashrc"
