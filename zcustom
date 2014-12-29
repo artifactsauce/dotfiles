@@ -1,0 +1,35 @@
+# .zcustom
+
+EDITOR='vi'
+VISUAL='vi'
+
+alias be="bundle exec"
+alias git=hub
+alias emacs="/usr/local/bin/emacs -nw"
+
+PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH"
+
+export GOPATH=$HOME
+PATH=$HOME/local/bin:$HOME/bin:$PATH
+PATH=$HOME/src/github.com/artifactsauce/proglets/bin:$PATH
+
+if [ -d "$HOME/google-cloud-sdk" ]; then
+    source "$HOME/google-cloud-sdk/path.bash.inc"
+    source "$HOME/google-cloud-sdk/completion.bash.inc"
+fi
+
+export ANDROID_SDK_ROOT="$(brew --prefix android-sdk)"
+export LESS='-R'
+export LESSOPEN='| '$(brew --prefix)/bin/src-hilite-lesspipe.sh' %s'
+
+if which rbenv > /dev/null; then; eval "$(rbenv init -)"; fi
+if which pyenv > /dev/null; then; eval "$(pyenv init -)"; fi
+source "$HOME/.perlbrew/etc/bashrc"
+
+source $(brew --prefix nvm)/nvm.sh
+if [ -d "~/.nvm" ]; then
+    export NVM_DIR=~/.nvm
+    nvm use default > /dev/null
+fi
+
+[[ -d ~/.shrc.d/hidden ]] && . ~/.shrc.d/hidden/*
