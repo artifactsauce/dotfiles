@@ -16,6 +16,7 @@ source '/opt/homebrew-cask/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/com
 export GOPATH=$HOME
 PATH=$HOME/local/bin:$HOME/bin:$PATH
 
+export STUDIO_JDK=/Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk
 export ANDROID_SDK_ROOT="$(brew --prefix android-sdk)"
 export LESS='-R'
 export LESSOPEN='| '$(brew --prefix)/bin/src-hilite-lesspipe.sh' %s'
