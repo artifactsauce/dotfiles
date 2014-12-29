@@ -26,6 +26,7 @@ source $(brew --prefix nvm)/nvm.sh
 if [ -d "~/.nvm" ]; then
     export NVM_DIR=~/.nvm
     nvm use default > /dev/null
+    source <(npm completion)
 fi
 
 [[ -d ~/.shrc.d/hidden ]] && . ~/.shrc.d/hidden/*
