@@ -8,8 +8,10 @@ alias git=hub
 alias emacs="/usr/local/bin/emacs -nw"
 
 PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH"
-PATH=$HOME/google-cloud-sdk/bin:$PATH
 PATH=$HOME/src/github.com/artifactsauce/proglets/bin:$PATH
+
+source '/opt/homebrew-cask/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc'
+source '/opt/homebrew-cask/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc'
 
 export GOPATH=$HOME
 PATH=$HOME/local/bin:$HOME/bin:$PATH
