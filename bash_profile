@@ -1,7 +1,6 @@
 # .bash_profile
 
 [[ -f ~/.bashrc ]] && . ~/.bashrc
-[[ -f ~/.bashrc.d/functions ]] && . ~/.bashrc.d/functions
 
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 export EDITOR=vi
