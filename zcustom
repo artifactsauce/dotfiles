@@ -32,4 +32,4 @@ if [ -d "~/.nvm" ]; then
     source <(npm completion)
 fi
 
-[[ -d ~/.shrc.d/hidden ]] && . ~/.shrc.d/hidden/*
+[ -d "~/.zshrc.d/hidden" ] && . ~/.zshrc.d/hidden/*
