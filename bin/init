@@ -1,14 +1,13 @@
 #!/bin/bash
-DIR=$(dirname $0)/..
-cd $HOME
+DIR=$(cd $(dirname $0);cd ..;pwd)
 for FILE in $(ls -1 $DIR | grep -v -E '(^README|bin)')
 do
-    if [ -e ".$FILE" ]; then
+    if [ -e "$HOME/.$FILE" ]; then
         echo "[WARN] File exists: .$FILE"
     else
-        if [ -L .$FILE ]; then
-            rm .$FILE
+        if [ -L $HOME/.$FILE ]; then
+            rm $HOME/.$FILE
         fi
-        ln -s $DIR/$FILE .$FILE && echo "[INFO] Created a symlink: .$FILE"
+        ln -s $DIR/$FILE $HOME/.$FILE && echo "[INFO] Created a symlink: .$FILE"
     fi
 done
