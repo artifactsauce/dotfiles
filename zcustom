@@ -9,6 +9,7 @@ alias emacs="/usr/local/bin/emacs -nw"
 
 PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH"
 PATH=$HOME/src/github.com/artifactsauce/proglets/bin:$PATH
+PATH=$HOME/src/bitbucket.org/artifactsauce/proglets/bin:$PATH
 
 source '/opt/homebrew-cask/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc'
 source '/opt/homebrew-cask/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc'
