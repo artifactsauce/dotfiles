@@ -7,6 +7,8 @@ alias be="bundle exec"
 alias git=hub
 alias emacs="/usr/local/bin/emacs -nw"
 
+[ $(uname) = 'Darwin' ] || return
+
 PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH"
 PATH=$HOME/src/github.com/artifactsauce/proglets/bin:$PATH
 PATH=$HOME/src/bitbucket.org/artifactsauce/proglets/bin:$PATH
