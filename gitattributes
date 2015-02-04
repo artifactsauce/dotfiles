@@ -13,3 +13,4 @@
 *.java diff=java
 *.t diff=perl
 *.js diff=java
+*.pbxproj merge=mergepbx
