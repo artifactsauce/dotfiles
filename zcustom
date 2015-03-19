@@ -42,5 +42,5 @@ if [ -d "$HOME/.zshrc.d/" ]; then
 fi
 
 if [ -d "$HOME/.zshrc.d/hidden/" ]; then
-    source $HOME/.zshrc.d/hidden/*
+    source $HOME/.zshrc.hidden.d/*
 fi
