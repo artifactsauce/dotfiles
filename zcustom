@@ -7,6 +7,17 @@ alias be="bundle exec"
 alias git=hub
 alias emacs="/usr/local/bin/emacs -nw"
 
+export GOPATH=$HOME
+PATH=$HOME/local/bin:$HOME/bin:$PATH
+
+if [ -d "$HOME/.zshrc.d/" ]; then
+    source $HOME/.zshrc.d/*
+fi
+
+if [ -d "$HOME/.zshrc.hidden.d/" ]; then
+    source $HOME/.zshrc.hidden.d/*
+fi
+
 [ $(uname) = 'Darwin' ] || return
 
 PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH"
@@ -16,9 +27,6 @@ MANPATH=$(brew --prefix coreutils)/share/man:$MANPATH
 
 source '/opt/homebrew-cask/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc'
 source '/opt/homebrew-cask/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc'
-
-export GOPATH=$HOME
-PATH=$HOME/local/bin:$HOME/bin:$PATH
 
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 export STUDIO_JDK=/Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk
@@ -35,12 +43,4 @@ if [ -d "$HOME/.nvm" ]; then
     export NVM_DIR=~/.nvm
     nvm use default > /dev/null
     source <(npm completion)
-fi
-
-if [ -d "$HOME/.zshrc.d/" ]; then
-    source $HOME/.zshrc.d/*
-fi
-
-if [ -d "$HOME/.zshrc.d/hidden/" ]; then
-    source $HOME/.zshrc.hidden.d/*
 fi
