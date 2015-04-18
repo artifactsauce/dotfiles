@@ -35,6 +35,7 @@ export ANDROID_SDK_ROOT="$(brew --prefix android-sdk)"
 export LESS='-R'
 export LESSOPEN='| '$(brew --prefix)/bin/src-hilite-lesspipe.sh' %s'
 
+if which direnv > /dev/null; then; eval "$(direnv hook zsh)"; fi
 if which rbenv > /dev/null; then; eval "$(rbenv init -)"; fi
 if which pyenv > /dev/null; then; eval "$(pyenv init -)"; fi
 source "$HOME/.perlbrew/etc/bashrc"
