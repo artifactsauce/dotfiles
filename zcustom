@@ -23,7 +23,7 @@ fi
 
 PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH"
 PATH=$HOME/src/github.com/artifactsauce/proglets/bin:$PATH
-PATH=$HOME/src/bitbucket.org/artifactsauce/proglets/bin:$PATH
+PATH=$HOME/GoogleDrive/work/proglets/bin:$PATH
 MANPATH=$(brew --prefix coreutils)/share/man:$MANPATH
 
 source '/opt/homebrew-cask/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc'
