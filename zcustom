@@ -26,8 +26,10 @@ PATH=$HOME/src/github.com/artifactsauce/proglets/bin:$PATH
 PATH=$HOME/GoogleDrive/work/proglets/bin:$PATH
 MANPATH=$(brew --prefix coreutils)/share/man:$MANPATH
 
-source '/opt/homebrew-cask/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc'
-source '/opt/homebrew-cask/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc'
+if [ -d "/opt/homebrew-cask/Caskroom/google-cloud-sdk/latest/google-cloud-sdk" ]; then
+    source '/opt/homebrew-cask/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc'
+    source '/opt/homebrew-cask/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc'
+fi
 
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 export STUDIO_JDK=/Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk
@@ -39,7 +41,10 @@ if which hub > /dev/null; then; eval "$(hub alias -s)"; fi
 if which direnv > /dev/null; then; eval "$(direnv hook zsh)"; fi
 if which rbenv > /dev/null; then; eval "$(rbenv init -)"; fi
 if which pyenv > /dev/null; then; eval "$(pyenv init -)"; fi
-source "$HOME/.perlbrew/etc/bashrc"
+
+if [ -f "$HOME/.perlbrew/etc/bashrc" ]; then
+    source "$HOME/.perlbrew/etc/bashrc"
+fi
 
 source $(brew --prefix nvm)/nvm.sh
 if [ -d "$HOME/.nvm" ]; then
