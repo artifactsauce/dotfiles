@@ -37,3 +37,7 @@
 [merge "mergepbx"]
         name = XCode project files merger
         driver = mergepbx %O %A %B
+[filter "lfs"]
+	clean = git lfs clean %f
+	smudge = git lfs smudge %f
+	required = true
