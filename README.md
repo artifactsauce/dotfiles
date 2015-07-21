@@ -16,22 +16,20 @@
 - emacs
 - tmux
 
+## Installation
 
-## Clone
-
-Run this:
+Excute this command.
 
 ```console
-$ git clone git@github.com:artifactsauce/dotfiles.git /PATH/TO/dotfiles
-$ cd /PATH/TO/dotfiles
-$ git submodule init
-$ git submodule update
-$ bin/init
+$ curl -L https://raw.githubusercontent.com/artifactsauce/dotfiles/master/bin/install | bash
 ```
+
+The environment variable, `$DEPLOY_DIRECTORY`, can be set.
+The default value is `$HOME/src/github.com/artifactsauce`.
 
 ## Scripts
 
-several scripts are stored in the _bin_ directory. 
+several scripts are stored in the _bin_ directory.
 
 ### init
 
