@@ -7,12 +7,11 @@
 
 ## Recommends
 
-- perlbrew
+- zsh
 - rbenv
 - pyenv
+- plenv
 - nvm
-- bash_completion
-- perltidy
 - emacs
 - tmux
 
