@@ -21,4 +21,4 @@ case `uname` in
          *) echo "Unexpected system name: `uname`";;
 esac
 
-[[ -d ~/.bashrc.d/hidden ]] && . ~/.bashrc.d/hidden/*
+[[ -d ~/.bashrc.hidden.d ]] && . ~/.bashrc.hidden.d/*
