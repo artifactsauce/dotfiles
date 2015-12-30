@@ -24,4 +24,4 @@ $ curl -L https://raw.githubusercontent.com/artifactsauce/dotfiles/master/bin/in
 ```
 
 The environment variable, `$DEPLOY_DIRECTORY`, can be set.
-The default value is `$HOME/src/github.com/artifactsauce`.
+The default value is the current directory.
