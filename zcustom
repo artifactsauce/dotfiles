@@ -14,17 +14,13 @@ launchctl setenv GOPATH $HOME
 export GOPATH=$HOME
 PATH=$HOME/local/bin:$HOME/bin:$PATH
 
-if [ -d "$HOME/.zshrc.d/" ]; then
-    source $HOME/.zshrc.d/*
-fi
+ARCH=$(uname)
+[ -d "$HOME/.zshrc.d/" ]           && . $HOME/.zshrc.d/*
+[ -f "$HOME/.zshrc.d/arch/$ARCH" ] && . $HOME/.zshrc.d/arch/$ARCH
+[ -d "$HOME/.zshrc.hidden.d/" ]    && . $HOME/.zshrc.hidden.d/*
+[ -f "$HOME/.travis/travis.sh" ]   && . $HOME/.travis/travis.sh
 
-if [ -d "$HOME/.zshrc.hidden.d/" ]; then
-    source $HOME/.zshrc.hidden.d/*
-fi
-
-[ -f "$HOME/.travis/travis.sh" ] && source "$HOME/.travis/travis.sh"
-
-[ $(uname) = 'Darwin' ] || return
+[ $ARCH = 'Darwin' ] || return 0
 
 PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH"
 PATH=$HOME/src/github.com/artifactsauce/proglets/bin:$PATH
