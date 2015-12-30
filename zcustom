@@ -22,6 +22,8 @@ if [ -d "$HOME/.zshrc.hidden.d/" ]; then
     source $HOME/.zshrc.hidden.d/*
 fi
 
+[ -f "$HOME/.travis/travis.sh" ] && source "$HOME/.travis/travis.sh"
+
 [ $(uname) = 'Darwin' ] || return
 
 PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH"
