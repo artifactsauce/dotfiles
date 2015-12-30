@@ -6,7 +6,8 @@ HISTSIZE=50000
 
 alias be="bundle exec"
 alias git=hub
-alias emacs="/usr/local/bin/emacs -nw"
+# alias emacs="/usr/local/bin/emacs -nw"
+alias emacs="/Applications/Emacs.app/Contents/MacOS/Emacs -nw"
 
 export GOPATH=$HOME
 PATH=$HOME/local/bin:$HOME/bin:$PATH
