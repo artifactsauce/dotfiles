@@ -4,15 +4,14 @@ EDITOR='vi'
 VISUAL='vi'
 HISTSIZE=50000
 
-alias be="bundle exec"
-alias git=hub
-# alias emacs="/usr/local/bin/emacs -nw"
-alias emacs="/Applications/Emacs.app/Contents/MacOS/Emacs -nw"
-alias vsnap="vagrant snapshot take $(date +%Y%m%d%H%M%S)"
+export LESS='-R'
+if which -s src-hilite-lesspipe.sh > /dev/null; then
+    export LESSOPEN='| '$(which src-hilite-lesspipe.sh)' %s'
+fi
 
-launchctl setenv GOPATH $HOME
 export GOPATH=$HOME
 PATH=$HOME/local/bin:$HOME/bin:$PATH
+PATH=$HOME/src/github.com/artifactsauce/proglets/bin:$PATH
 
 ARCH=$(uname)
 [ -d "$HOME/.zshrc.d/" ]           && . $HOME/.zshrc.d/*
@@ -20,34 +19,12 @@ ARCH=$(uname)
 [ -d "$HOME/.zshrc.hidden.d/" ]    && . $HOME/.zshrc.hidden.d/*
 [ -f "$HOME/.travis/travis.sh" ]   && . $HOME/.travis/travis.sh
 
-[ $ARCH = 'Darwin' ] || return 0
+if which -s hub    > /dev/null; then eval "$(hub alias -s)"; fi
+if which -s direnv > /dev/null; then eval "$(direnv hook zsh)"; fi
+if which -s rbenv  > /dev/null; then eval "$(rbenv init -)"; fi
+if which -s pyenv  > /dev/null; then eval "$(pyenv init -)"; fi
+if which -s plenv  > /dev/null; then eval "$(plenv init -)"; fi
+if which -s exenv  > /dev/null; then eval "$(exenv init -)"; fi
 
-PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH"
-PATH=$HOME/src/github.com/artifactsauce/proglets/bin:$PATH
-MANPATH=$(brew --prefix coreutils)/share/man:$MANPATH
-
-if [ -d "/opt/homebrew-cask/Caskroom/google-cloud-sdk/latest/google-cloud-sdk" ]; then
-    source '/opt/homebrew-cask/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc'
-    source '/opt/homebrew-cask/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc'
-fi
-
-export HOMEBREW_CASK_OPTS="--appdir=/Applications"
-export STUDIO_JDK=/Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk
-export ANDROID_SDK_ROOT="$(brew --prefix android-sdk)"
-export ANDROID_HOME="$(brew --prefix android-sdk)"
-export LESS='-R'
-export LESSOPEN='| '$(brew --prefix)/bin/src-hilite-lesspipe.sh' %s'
-
-if which hub > /dev/null; then; eval "$(hub alias -s)"; fi
-if which direnv > /dev/null; then; eval "$(direnv hook zsh)"; fi
-if which rbenv > /dev/null; then; eval "$(rbenv init -)"; fi
-if which pyenv > /dev/null; then; eval "$(pyenv init -)"; fi
-if which plenv > /dev/null; then eval "$(plenv init -)"; fi
-if which exenv > /dev/null; then eval "$(exenv init -)"; fi
-
-source $(brew --prefix nvm)/nvm.sh
-if [ -d "$HOME/.nvm" ]; then
-    export NVM_DIR=~/.nvm
-    nvm use default > /dev/null
-    source <(npm completion)
-fi
+if which -s bundle  > /dev/null; then alias be="bundle exec"; fi
+if which -s vagrant > /dev/null; then alias vsnap="vagrant snapshot take $(date +%Y%m%d%H%M%S)"; fi

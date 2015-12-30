@@ -1,0 +1,24 @@
+PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH"
+MANPATH=$(brew --prefix coreutils)/share/man:$MANPATH
+
+launchctl setenv GOPATH $HOME
+
+if [ -d "/opt/homebrew-cask/Caskroom/google-cloud-sdk/latest/google-cloud-sdk" ]; then
+    source '/opt/homebrew-cask/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc'
+    source '/opt/homebrew-cask/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc'
+fi
+
+export HOMEBREW_CASK_OPTS="--appdir=/Applications"
+export STUDIO_JDK=/Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk
+export ANDROID_SDK_ROOT="$(brew --prefix android-sdk)"
+export ANDROID_HOME="$(brew --prefix android-sdk)"
+
+# alias emacs="/usr/local/bin/emacs -nw"
+alias emacs="/Applications/Emacs.app/Contents/MacOS/Emacs -nw"
+
+source $(brew --prefix nvm)/nvm.sh
+if [ -d "$HOME/.nvm" ]; then
+    export NVM_DIR=~/.nvm
+    nvm use default > /dev/null
+    source <(npm completion)
+fi
