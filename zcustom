@@ -10,6 +10,7 @@ alias git=hub
 alias emacs="/Applications/Emacs.app/Contents/MacOS/Emacs -nw"
 alias vsnap="vagrant snapshot take $(date +%Y%m%d%H%M%S)"
 
+launchctl setenv GOPATH $HOME
 export GOPATH=$HOME
 PATH=$HOME/local/bin:$HOME/bin:$PATH
 
