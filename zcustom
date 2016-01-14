@@ -27,4 +27,4 @@ if which -s plenv  > /dev/null; then eval "$(plenv init -)"; fi
 if which -s exenv  > /dev/null; then eval "$(exenv init -)"; fi
 
 if which -s bundle  > /dev/null; then alias be="bundle exec"; fi
-if which -s vagrant > /dev/null; then alias vsnap="vagrant snapshot take $(date +%Y%m%d%H%M%S)"; fi
+if which -s vagrant > /dev/null; then alias vsnap="vagrant snapshot take \$(date +%Y%m%d%H%M%S)"; fi
