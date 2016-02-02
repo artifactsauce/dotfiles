@@ -1,5 +1,7 @@
 # .zcustom
 
+zargs() { while read i; do "$@" "$i"; done }
+
 EDITOR='vi'
 VISUAL='vi'
 HISTSIZE=50000
@@ -14,10 +16,8 @@ PATH=$HOME/local/bin:$HOME/bin:$PATH
 PATH=$HOME/src/github.com/artifactsauce/proglets/bin:$PATH
 
 ARCH=$(uname)
-[ -d "$HOME/.zshrc.d/" ]           && . $HOME/.zshrc.d/*
-[ -f "$HOME/.zshrc.d/arch/$ARCH" ] && . $HOME/.zshrc.d/arch/$ARCH
-[ -d "$HOME/.zshrc.hidden.d/" ]    && . $HOME/.zshrc.hidden.d/*
-[ -f "$HOME/.travis/travis.sh" ]   && . $HOME/.travis/travis.sh
+[ -d "$HOME/.zshrc.d/" ] && find $HOME/.zshrc.d/ -name "*.sh" -type f | zargs source
+[ -f "$HOME/.travis/travis.sh" ] && . $HOME/.travis/travis.sh
 
 if which -s hub    > /dev/null; then eval "$(hub alias -s)"; fi
 if which -s direnv > /dev/null; then eval "$(direnv hook zsh)"; fi
