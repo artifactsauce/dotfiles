@@ -22,18 +22,14 @@ do
     [ -f "$HOME/.zshrc.d/$REPLY" ] && source $HOME/.zshrc.d/$REPLY
 done <<EOS
 peco
+localenv
 arch/${ARCH}
 hidden/environments
 EOS
 
 [ -f "$HOME/.travis/travis.sh" ] && . $HOME/.travis/travis.sh
 
-if which -s hub    > /dev/null; then eval "$(hub alias -s)"; fi
-if which -s direnv > /dev/null; then eval "$(direnv hook zsh)"; fi
-if which -s rbenv  > /dev/null; then eval "$(rbenv init -)"; fi
-if which -s pyenv  > /dev/null; then eval "$(pyenv init -)"; fi
-if which -s plenv  > /dev/null; then eval "$(plenv init -)"; fi
-if which -s exenv  > /dev/null; then eval "$(exenv init -)"; fi
-
+if which -s hub     > /dev/null; then eval "$(hub alias -s)"; fi
+if which -s direnv  > /dev/null; then eval "$(direnv hook zsh)"; fi
 if which -s bundle  > /dev/null; then alias be="bundle exec"; fi
 if which -s vagrant > /dev/null; then alias vsnap="vagrant snapshot take \$(date +%Y%m%d%H%M%S)"; fi
