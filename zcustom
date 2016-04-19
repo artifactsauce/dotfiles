@@ -21,7 +21,7 @@ do
 done <<EOS
 functions
 peco
-localenv
+interpreter
 arch/${ARCH}
 hidden/environments
 EOS

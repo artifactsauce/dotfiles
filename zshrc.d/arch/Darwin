@@ -15,10 +15,3 @@ export ANDROID_HOME="$(brew --prefix android-sdk)"
 
 # alias emacs="/usr/local/bin/emacs -nw"
 alias emacs="/Applications/Emacs.app/Contents/MacOS/Emacs -nw"
-
-source $(brew --prefix nvm)/nvm.sh
-if [ -d "$HOME/.nvm" ]; then
-    export NVM_DIR=~/.nvm
-    nvm use default > /dev/null
-    source <(npm completion)
-fi
