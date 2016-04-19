@@ -11,7 +11,7 @@ fi
 
 export GOPATH=$HOME
 PATH=$HOME/local/bin:$GOPATH/bin:$PATH
-PATH=$HOME/src/github.com/artifactsauce/proglets/bin:$PATH
+eval "$($HOME/src/github.com/artifactsauce/proglets/bin/proglets init -)"
 
 ARCH=$(uname)
 while read
