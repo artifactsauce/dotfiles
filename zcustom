@@ -1,7 +1,5 @@
 # .zcustom
 
-zargs() { while read i; do "$@" "$i"; done }
-
 EDITOR='vi'
 VISUAL='vi'
 HISTSIZE=50000
@@ -21,6 +19,7 @@ do
     [[ "$REPLY" =~ ^\# ]] && continue
     [ -f "$HOME/.zshrc.d/$REPLY" ] && source $HOME/.zshrc.d/$REPLY
 done <<EOS
+functions
 peco
 localenv
 arch/${ARCH}

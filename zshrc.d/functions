@@ -1,0 +1,3 @@
+# functions
+
+zargs() { while read i; do "$@" "$i"; done }
