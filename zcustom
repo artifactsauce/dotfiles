@@ -10,7 +10,7 @@ if which -s src-hilite-lesspipe.sh > /dev/null; then
 fi
 
 export GOPATH=$HOME
-PATH=$HOME/local/bin:$HOME/bin:$PATH
+PATH=$HOME/local/bin:$GOPATH/bin:$PATH
 PATH=$HOME/src/github.com/artifactsauce/proglets/bin:$PATH
 
 ARCH=$(uname)
