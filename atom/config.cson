@@ -1,0 +1,53 @@
+"*":
+  core:
+    themes: [
+      "one-dark-ui"
+      "duotone-dark-syntax"
+    ]
+  editor:
+    fontFamily: "Source Code Pro"
+    fontSize: 12
+    tabLength: 4
+  "exception-reporting":
+    userId: "e6a988cf-a267-17e5-0f14-f92bd69ff6de"
+  "markdown-writer":
+    fileExtension: ".md"
+    siteEngine: "jekyll"
+  welcome:
+    showOnStartup: false
+".coffee.source":
+  editor:
+    tabLength: 2
+".css.source":
+  editor:
+    tabLength: 4
+".erb.html.text":
+  editor:
+    tabLength: 4
+".html.php.text":
+  editor:
+    tabLength: 4
+".html.ruby.text":
+  editor:
+    tabLength: 2
+".js.rails.source source.jquery.js":
+  editor:
+    tabLength: 2
+".js.regexp.replacement.source":
+  editor:
+    tabLength: 2
+".js.regexp.source":
+  editor:
+    tabLength: 2
+".rails.rjs.ruby.source":
+  editor:
+    tabLength: 2
+".rails.ruby.source":
+  editor:
+    tabLength: 2
+".shell-session.text":
+  editor:
+    tabLength: 2
+".shell.source":
+  editor:
+    tabLength: 2
