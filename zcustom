@@ -31,4 +31,3 @@ EOS
 if which -s hub     > /dev/null; then eval "$(hub alias -s)"; fi
 if which -s direnv  > /dev/null; then eval "$(direnv hook zsh)"; fi
 if which -s bundle  > /dev/null; then alias be="bundle exec"; fi
-if which -s vagrant > /dev/null; then alias vsnap="vagrant snapshot take \$(date +%Y%m%d%H%M%S)"; fi
