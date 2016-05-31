@@ -6,7 +6,8 @@
     ]
   editor:
     fontFamily: "Source Code Pro"
-    fontSize: 12
+    showInvisibles: true
+    softWrap: true
     tabLength: 4
   "exception-reporting":
     userId: "e6a988cf-a267-17e5-0f14-f92bd69ff6de"
@@ -18,12 +19,18 @@
 ".coffee.source":
   editor:
     tabLength: 2
+".css.scss.source":
+  editor:
+    tabLength: 2
 ".css.source":
+  editor:
+    tabLength: 4
+".dockerfile.source":
   editor:
     tabLength: 4
 ".erb.html.text":
   editor:
-    tabLength: 4
+    tabLength: 2
 ".html.php.text":
   editor:
     tabLength: 4
@@ -43,6 +50,12 @@
   editor:
     tabLength: 2
 ".rails.ruby.source":
+  editor:
+    tabLength: 2
+".ruby.source":
+  editor:
+    tabLength: 2
+".sass.source":
   editor:
     tabLength: 2
 ".shell-session.text":
