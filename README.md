@@ -17,7 +17,7 @@
 
 ## Installation
 
-Excute this command.
+Execute this command.
 
 ```console
 $ curl -L https://raw.githubusercontent.com/artifactsauce/dotfiles/master/bin/install | bash
