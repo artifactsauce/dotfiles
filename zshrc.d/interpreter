@@ -1,11 +1,10 @@
-if which -s rbenv  > /dev/null; then eval "$(rbenv init -)"; fi
-if which -s pyenv  > /dev/null; then eval "$(pyenv init -)"; fi
-if which -s plenv  > /dev/null; then eval "$(plenv init -)"; fi
-if which -s exenv  > /dev/null; then eval "$(exenv init -)"; fi
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
+if which plenv > /dev/null; then eval "$(plenv init -)"; fi
+if which exenv > /dev/null; then eval "$(exenv init -)"; fi
 
-source $(brew --prefix nvm)/nvm.sh
-if [ -d "$HOME/.nvm" ]; then
-    export NVM_DIR=~/.nvm
+if [ -f "$NVM_DIR/nvm.sh" ]; then
+    . $NVM_DIR/nvm.sh
     nvm use default > /dev/null
     source <(npm completion)
 fi
