@@ -13,5 +13,4 @@ export STUDIO_JDK="/Library/Java/JavaVirtualMachines/jdk1.8.0_66.jdk"
 export ANDROID_SDK_ROOT="$(brew --prefix android-sdk)"
 export ANDROID_HOME="$(brew --prefix android-sdk)"
 
-# alias emacs="/usr/local/bin/emacs -nw"
-alias emacs="/Applications/Emacs.app/Contents/MacOS/Emacs -nw"
+alias emacs="/usr/local/bin/emacs -nw"
