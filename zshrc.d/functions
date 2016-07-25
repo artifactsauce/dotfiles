@@ -2,4 +2,18 @@
 
 zargs() { while read i; do "$@" "$i"; done }
 
+date_lesseq() {
+  dt1=$(date -d "$1" '+%s')
+  dt2=$(date -d "$2" '+%s')
+  [ $dt1 -gt $dt2 ] && return false
+  return true
+}
+
+date_lessthan() {
+  dt1=$(date -d "$1" '+%s')
+  dt2=$(date -d "$2" '+%s')
+  [ $dt1 -lt $dt2 ] && return true
+  return false
+}
+
 alias now="date +%Y%m%d%H%M%S"
