@@ -64,3 +64,6 @@
 ".shell.source":
   editor:
     tabLength: 2
+".source.yaml":
+  editor:
+    tabLength: 4
