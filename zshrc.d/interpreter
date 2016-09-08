@@ -3,6 +3,11 @@ if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
 if which plenv > /dev/null; then eval "$(plenv init -)"; fi
 if which exenv > /dev/null; then eval "$(exenv init -)"; fi
 
+if which brew > /dev/null; then
+    export NVM_DIR="$(realpath $(brew --prefix nvm))"
+else
+    export NVM_DIR="/usr/local/opt/nvm"
+fi
 if [ -f "$NVM_DIR/nvm.sh" ]; then
     . $NVM_DIR/nvm.sh
     nvm use default > /dev/null
