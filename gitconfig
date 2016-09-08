@@ -42,4 +42,4 @@
 	smudge = git lfs smudge %f
 	required = true
 [ghq]
-	root = /Users/akiyama/src
+	root = /Users/k-akiyama/src
