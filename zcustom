@@ -13,6 +13,7 @@ if which -s src-hilite-lesspipe.sh > /dev/null; then
     export LESSOPEN='| '$(which src-hilite-lesspipe.sh)' %s'
 fi
 
+export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
 export GOPATH=$HOME
 PATH=$HOME/local/bin:$GOPATH/bin:$PATH
 eval "$($HOME/src/github.com/artifactsauce/proglets/bin/proglets init -)"
