@@ -14,6 +14,8 @@ if which -s src-hilite-lesspipe.sh > /dev/null; then
 fi
 
 export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
+export STUDIO_JDK="$JAVA_HOME"
+
 export GOPATH=$HOME
 PATH=$HOME/Dropbox/cmd/bin:$HOME/local/bin:$GOPATH/bin:$PATH
 eval "$($HOME/src/github.com/artifactsauce/proglets/bin/proglets init -)"
