@@ -1,5 +1,6 @@
 "*":
   core:
+    telemetryConsent: "no"
     themes: [
       "one-dark-ui"
       "duotone-dark-syntax"
@@ -9,6 +10,7 @@
     showInvisibles: true
     softWrap: true
     tabLength: 4
+    tabType: "soft"
   "exception-reporting":
     userId: "e6a988cf-a267-17e5-0f14-f92bd69ff6de"
   "markdown-writer":
@@ -46,6 +48,9 @@
 ".js.regexp.source":
   editor:
     tabLength: 2
+".json.source":
+  editor:
+    tabLength: 4
 ".rails.rjs.ruby.source":
   editor:
     tabLength: 2
