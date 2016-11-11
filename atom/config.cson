@@ -2,7 +2,7 @@
   core:
     telemetryConsent: "no"
     themes: [
-      "one-dark-ui"
+      "atom-material-ui"
       "duotone-dark-syntax"
     ]
   editor:
