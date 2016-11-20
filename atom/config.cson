@@ -3,7 +3,7 @@
     telemetryConsent: "no"
     themes: [
       "atom-material-ui"
-      "duotone-dark-syntax"
+      "one-dark-syntax"
     ]
   editor:
     fontFamily: "Source Code Pro"
