@@ -69,6 +69,9 @@
 ".shell.source":
   editor:
     tabLength: 2
+".source.sql":
+  editor:
+    tabType: "hard"
 ".source.yaml":
   editor:
     tabLength: 2
