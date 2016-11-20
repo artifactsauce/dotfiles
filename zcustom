@@ -18,6 +18,7 @@ export STUDIO_JDK="$JAVA_HOME"
 
 export GOPATH=$HOME
 PATH=$HOME/Dropbox/cmd/bin:$HOME/local/bin:$GOPATH/bin:$PATH
+eval "$($HOME/src/github.com/artifactsauce/new/bin/mpkg init -)"
 eval "$($HOME/src/github.com/artifactsauce/proglets/bin/proglets init -)"
 eval "$($HOME/src/gitlab.com/artifactsauce/swine/bin/swine init -)"
 
