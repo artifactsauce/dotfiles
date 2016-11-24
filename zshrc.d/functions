@@ -2,4 +2,4 @@
 
 zargs() { while read i; do "$@" "$i"; done }
 
-alias now="date +%Y%m%d%H%M%S"
+now() { date "+%Y%m%d%H%M%S" }
