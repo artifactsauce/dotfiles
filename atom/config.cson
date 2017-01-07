@@ -13,6 +13,9 @@
     tabType: "soft"
   "exception-reporting":
     userId: "e6a988cf-a267-17e5-0f14-f92bd69ff6de"
+  "git-plus":
+    general:
+      _analyticsUserId: "399e73bc-a3a4-4369-878a-e97ca56afe3b"
   "markdown-writer":
     fileExtension: ".md"
     siteEngine: "jekyll"
