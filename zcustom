@@ -25,7 +25,6 @@ eval "$($HOME/src/github.com/artifactsauce/proglets/bin/generate init -)"
 eval "$($HOME/src/github.com/artifactsauce/proglets/bin/pm init -)"
 eval "$($HOME/src/gitlab.com/artifactsauce/proglets/bin/swine init -)"
 
-ARCH=$(uname)
 while read
 do
     [[ "$REPLY" =~ ^\# ]] && continue
@@ -34,7 +33,7 @@ done <<EOS
 functions
 peco
 interpreter
-arch/${ARCH}
+arch/$(uname)
 hidden/environments
 EOS
 
