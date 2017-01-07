@@ -34,7 +34,6 @@ functions
 peco
 interpreter
 arch/$(uname)
-hidden/environments
 EOS
 
 [ -f "$HOME/.travis/travis.sh" ] && . $HOME/.travis/travis.sh
