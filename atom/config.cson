@@ -2,12 +2,14 @@
   core:
     telemetryConsent: "no"
     themes: [
-      "atom-material-ui"
-      "one-dark-syntax"
+      "atom-dark-ui"
+      "base16-tomorrow-dark-theme"
     ]
+  "daylight-ui":
+    layoutMode: "Compact"
   editor:
     fontFamily: "Source Code Pro"
-    showInvisibles: true
+    showIndentGuide: true
     softWrap: true
     tabLength: 4
     tabType: "soft"
@@ -24,6 +26,9 @@
 ".coffee.source":
   editor:
     tabLength: 2
+".css.less.source":
+  editor:
+    tabLength: 2
 ".css.scss.source":
   editor:
     tabLength: 2
@@ -36,6 +41,9 @@
 ".erb.html.text":
   editor:
     tabLength: 2
+".go.source":
+  editor:
+    tabType: "hard"
 ".html.php.text":
   editor:
     tabLength: 4
