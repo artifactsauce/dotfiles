@@ -23,6 +23,7 @@ PATH=$HOME/src/gitlab.com/artifactsauce/proglets/bin:$PATH # private
 eval "$($HOME/src/github.com/artifactsauce/proglets/bin/mpkg init -)"
 eval "$($HOME/src/github.com/artifactsauce/proglets/bin/generate init -)"
 eval "$($HOME/src/github.com/artifactsauce/proglets/bin/pm init -)"
+eval "$($HOME/src/github.com/artifactsauce/proglets/bin/batchrepos init -)"
 eval "$($HOME/src/gitlab.com/artifactsauce/proglets/bin/swine init -)"
 
 while read
