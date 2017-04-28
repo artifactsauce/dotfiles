@@ -12,4 +12,4 @@ export ANDROID_HOME=/usr/local/share/android-sdk
 
 launchctl setenv GOPATH $HOME
 
-alias emacs="/usr/local/bin/emacs -nw"
+alias excel='open -a "Microsoft Excel"'
