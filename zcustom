@@ -5,7 +5,7 @@ export VISUAL='vi'
 export HISTSIZE=50000
 export LESS='-R'
 if which -s src-hilite-lesspipe.sh > /dev/null; then
-    export LESSOPEN='| '$(which src-hilite-lesspipe.sh)' %s'
+  export LESSOPEN='| '$(which src-hilite-lesspipe.sh)' %s'
 fi
 
 export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
@@ -20,10 +20,9 @@ eval "$($HOME/src/github.com/artifactsauce/proglets/bin/generate init -)"
 eval "$($HOME/src/github.com/artifactsauce/proglets/bin/pm init -)"
 eval "$($HOME/src/github.com/artifactsauce/proglets/bin/batchrepos init -)"
 
-while read
-do
-    [[ "$REPLY" =~ ^\# ]] && continue
-    [ -f "$HOME/.zshrc.d/$REPLY" ] && source $HOME/.zshrc.d/$REPLY
+while read; do
+  [[ "$REPLY" =~ ^\# ]] && continue
+  [ -f "$HOME/.zshrc.d/$REPLY" ] && source $HOME/.zshrc.d/$REPLY
 done <<EOS
 functions
 peco
