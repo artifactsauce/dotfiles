@@ -4,10 +4,6 @@ EDITOR='vi'
 VISUAL='vi'
 HISTSIZE=50000
 
-unalias run-help
-autoload run-help
-export HELPDIR=/usr/local/share/zsh/help
-
 export LESS='-R'
 if which -s src-hilite-lesspipe.sh > /dev/null; then
     export LESSOPEN='| '$(which src-hilite-lesspipe.sh)' %s'
