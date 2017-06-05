@@ -1,9 +1,8 @@
 # .zcustom
 
-EDITOR='vi'
-VISUAL='vi'
-HISTSIZE=50000
-
+export EDITOR='vi'
+export VISUAL='vi'
+export HISTSIZE=50000
 export LESS='-R'
 if which -s src-hilite-lesspipe.sh > /dev/null; then
     export LESSOPEN='| '$(which src-hilite-lesspipe.sh)' %s'
