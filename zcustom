@@ -23,14 +23,14 @@ eval "$($HOME/src/github.com/artifactsauce/proglets/bin/batchrepos init -)"
 while read; do
   [[ "$REPLY" =~ ^\# ]] && continue
   [ -f "$HOME/.zshrc.d/$REPLY" ] && source $HOME/.zshrc.d/$REPLY
-done <<EOS
+done <<EOF
 functions
 peco
 interpreter
 arch/$(uname)
-EOS
+EOF
 
 if which -s hub     > /dev/null; then eval "$(hub alias -s)"; fi
 if which -s direnv  > /dev/null; then eval "$(direnv hook zsh)"; fi
 if which -s bundle  > /dev/null; then alias be="bundle exec"; fi
-if [ -f "$HOME/.travis/travis.sh" ]; then . $HOME/.travis/travis.sh
+if [ -f "$HOME/.travis/travis.sh" ]; then source $HOME/.travis/travis.sh; fi
