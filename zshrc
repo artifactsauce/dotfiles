@@ -35,7 +35,7 @@ interpreter
 arch/$(uname)
 EOF
 
-if which -s hub     > /dev/null; then eval "$(hub alias -s)"; fi
-if which -s direnv  > /dev/null; then eval "$(direnv hook zsh)"; fi
-if which -s bundle  > /dev/null; then alias be="bundle exec"; fi
+if type hub     &> /dev/null; then eval "$(hub alias -s)"; fi
+if type direnv  &> /dev/null; then eval "$(direnv hook zsh)"; fi
+if type bundle  &> /dev/null; then alias be="bundle exec"; fi
 if [ -f "$HOME/.travis/travis.sh" ]; then source $HOME/.travis/travis.sh; fi
