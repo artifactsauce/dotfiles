@@ -5,9 +5,9 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
 
+export HISTSIZE=50000
 export EDITOR='vi'
 export VISUAL='vi'
-export HISTSIZE=50000
 export LESS='-R'
 if which -s src-hilite-lesspipe.sh > /dev/null; then
   export LESSOPEN='| '$(which src-hilite-lesspipe.sh)' %s'
