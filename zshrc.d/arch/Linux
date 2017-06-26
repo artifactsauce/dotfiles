@@ -1,2 +1,1 @@
 PATH=$HOME/.cask/bin:$PATH
-PATH=$HOME/Dropbox/vendor/bin/linux:$GOPATH/bin:$PATH
