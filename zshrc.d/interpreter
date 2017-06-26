@@ -4,13 +4,9 @@ if type plenv &> /dev/null; then eval "$(plenv init -)"; fi
 if type exenv &> /dev/null; then eval "$(exenv init -)"; fi
 
 export NVM_DIR="$HOME/.nvm"
-
-if which brew > /dev/null; then
-    NVM_INIT_FILE="$(realpath $(brew --prefix nvm))/nvm.sh"
-else
-    NVM_INIT_FILE="$HOME/.nvm/nvm.sh"
+NVM_RC_FILE=$(realpath "$NVM_DIR/nvm.sh")
+if type brew &> /dev/null; then
+    NVM_RC_FILE="$(realpath $(brew --prefix nvm))/nvm.sh"
 fi
-if [ -f "$NVM_INIT_FILE" ]; then
-    . $NVM_INIT_FILE
-    source <(npm completion)
-fi
+source $NVM_RC_FILE
+source <(npm completion)
