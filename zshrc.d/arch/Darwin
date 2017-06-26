@@ -3,8 +3,6 @@ export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
 export STUDIO_JDK="$JAVA_HOME"
 export ANDROID_HOME=/usr/local/share/android-sdk
 
-PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH"
-MANPATH="$(brew --prefix coreutils)/share/man:$MANPATH"
 fpath=(/usr/local/share/zsh-completions $fpath)
 
 if [ -d "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk" ]; then
