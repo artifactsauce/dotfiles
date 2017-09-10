@@ -42,4 +42,6 @@
 	smudge = git lfs smudge %f
 	required = true
 [ghq]
-	root = /Users/k-akiyama/src
+	root = /Users/artifactsauce/src
+[include]
+	path = /Users/k-akiyama/Dropbox/conf/alt-gitconfig.conf
