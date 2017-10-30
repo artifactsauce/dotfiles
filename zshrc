@@ -38,3 +38,6 @@ peco
 interpreter
 arch/$(uname)
 EOF
+
+HIDDEN_ENV_FILE="~/Dropbox/conf/hidden_env.rc"
+[ -f "$HIDDEN_ENV_FILE" ] && . "$HIDDEN_ENV_FILE"
