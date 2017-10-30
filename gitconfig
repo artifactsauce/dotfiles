@@ -38,8 +38,9 @@
         name = XCode project files merger
         driver = mergepbx %O %A %B
 [filter "lfs"]
-	clean = git lfs clean %f
-	smudge = git lfs smudge %f
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
 	required = true
 [ghq]
 	root = /Users/artifactsauce/src
