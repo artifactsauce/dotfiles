@@ -3,10 +3,3 @@ if type pyenv &> /dev/null; then eval "$(pyenv init -)"; fi
 if type plenv &> /dev/null; then eval "$(plenv init -)"; fi
 if type exenv &> /dev/null; then eval "$(exenv init -)"; fi
 
-export NVM_DIR="$HOME/.nvm"
-NVM_RC_FILE=$(realpath "$NVM_DIR/nvm.sh")
-if type brew &> /dev/null; then
-  NVM_RC_FILE="$(realpath $(brew --prefix nvm))/nvm.sh"
-fi
-source $NVM_RC_FILE
-source <(npm completion)
