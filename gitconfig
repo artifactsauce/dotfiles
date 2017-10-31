@@ -43,6 +43,6 @@
 	process = git-lfs filter-process
 	required = true
 [ghq]
-	root = ~/src
+	root = \"$HOME\"/src
 [include]
-	path = ~/Dropbox/conf/alt-gitconfig.conf
+	path = \"$HOME\"/Dropbox/conf/alt-gitconfig.conf
