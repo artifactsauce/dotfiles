@@ -43,6 +43,6 @@
 	process = git-lfs filter-process
 	required = true
 [ghq]
-	root = /Users/artifactsauce/src
+	root = ~/src
 [include]
-	path = /Users/k-akiyama/Dropbox/conf/alt-gitconfig.conf
+	path = ~/Dropbox/conf/alt-gitconfig.conf
