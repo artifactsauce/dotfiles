@@ -2,4 +2,12 @@ if type rbenv &> /dev/null; then eval "$(rbenv init -)"; fi
 if type pyenv &> /dev/null; then eval "$(pyenv init -)"; fi
 if type plenv &> /dev/null; then eval "$(plenv init -)"; fi
 if type exenv &> /dev/null; then eval "$(exenv init -)"; fi
-if type ndenv &> /dev/null; then eval "$(ndenv init -)"; fi
+
+export NVM_DIR="$HOME/.nvm"
+if type brew &> /dev/null; then
+  NVM_RESOURCE="/usr/local/opt/nvm/nvm.sh"
+else
+  NVM_RESOURCE=$(realpath "$NVM_DIR/nvm.sh")
+fi
+source $NVM_RESOURCE
+source <(npm completion)
