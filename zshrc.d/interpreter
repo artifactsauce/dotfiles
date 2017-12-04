@@ -3,11 +3,17 @@ if type pyenv &> /dev/null; then eval "$(pyenv init -)"; fi
 if type plenv &> /dev/null; then eval "$(plenv init -)"; fi
 if type exenv &> /dev/null; then eval "$(exenv init -)"; fi
 
-export NVM_DIR="$HOME/.nvm"
-if type brew &> /dev/null; then
+if type nvm &> /dev/null; then load_nvm; fi
+
+load_nvm() {
+  export NVM_DIR="$HOME/.nvm"
   NVM_RESOURCE="/usr/local/opt/nvm/nvm.sh"
-else
-  NVM_RESOURCE=$(realpath "$NVM_DIR/nvm.sh")
-fi
-source $NVM_RESOURCE
-source <(npm completion)
+  if [ -f "$NVM_RESOURCE" ]; then # if install by brew 
+    . "$NVM_RESOURCE"
+  else
+    . "$(realpath "$NVM_DIR/nvm.sh")"
+  fi
+
+  # npm config delete prefix
+  # source <(npm completion)
+}
