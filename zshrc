@@ -14,11 +14,6 @@ if which -s src-hilite-lesspipe.sh > /dev/null; then
 fi
 
 export GOPATH=$HOME
-PATH=$GOPATH/bin:$PATH
-PATH=$HOME/Dropbox/vendor/bin:$PATH
-PATH=$HOME/Dropbox/vendor/bin/$(uname):$PATH
-PATH=$HOME/src/github.com/artifactsauce/proglets/bin:$PATH # public
-PATH=$HOME/src/gitlab.com/artifactsauce/proglets/bin:$PATH # private
 eval "$($HOME/src/github.com/artifactsauce/proglets/bin/mpkg init -)"
 eval "$($HOME/src/github.com/artifactsauce/proglets/bin/generate init -)"
 eval "$($HOME/src/github.com/artifactsauce/proglets/bin/pm init -)"
@@ -33,6 +28,7 @@ while read; do
   [[ "$REPLY" =~ ^\# ]] && continue
   [ -f "$HOME/.zshrc.d/$REPLY" ] && source $HOME/.zshrc.d/$REPLY
 done <<EOF
+path
 functions
 peco
 interpreter

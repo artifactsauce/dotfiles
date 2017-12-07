@@ -1,0 +1,10 @@
+while read; do
+  PATH="$REPLY:$PATH"
+done <<EOD
+$GOPATH/bin
+$HOME/Dropbox/vendor/bin
+$HOME/Dropbox/vendor/bin/$(uname)
+$HOME/src/github.com/artifactsauce/proglets/bin
+$HOME/src/gitlab.com/artifactsauce/proglets/bin
+/usr/local/opt/curl/bin
+EOD
