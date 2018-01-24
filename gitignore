@@ -6,3 +6,4 @@
 *.sw[po]
 *.log
 *.bak
+.vscode/*
