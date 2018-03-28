@@ -13,5 +13,3 @@ fi
 launchctl setenv GOPATH $HOME
 
 alias excel='open -a "Microsoft Excel"'
-alias atom='atom-beta'
-alias apm='apm-beta'
