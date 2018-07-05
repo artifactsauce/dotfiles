@@ -14,10 +14,6 @@ if which -s src-hilite-lesspipe.sh > /dev/null; then
 fi
 
 export GOPATH=$HOME
-eval "$($HOME/src/github.com/artifactsauce/proglets/bin/mpkg init -)"
-eval "$($HOME/src/github.com/artifactsauce/proglets/bin/generate init -)"
-eval "$($HOME/src/github.com/artifactsauce/proglets/bin/pm init -)"
-eval "$($HOME/src/github.com/artifactsauce/proglets/bin/batchrepos init -)"
 
 if type hub     &> /dev/null; then eval "$(hub alias -s)"; fi
 if type direnv  &> /dev/null; then eval "$(direnv hook zsh)"; fi
@@ -29,6 +25,7 @@ while read; do
   [ -f "$HOME/.zshrc.d/$REPLY" ] && source $HOME/.zshrc.d/$REPLY
 done <<EOF
 path
+cmdinit
 functions
 peco
 interpreter
