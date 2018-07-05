@@ -46,3 +46,6 @@
 	root = ~/src
 [include]
 	path = ~/Dropbox/conf/alt-gitconfig.conf
+[pager]
+	branch = false
+[http]
