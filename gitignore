@@ -7,3 +7,6 @@
 *.log
 *.bak
 .vscode/*
+.gradle/*
+.project
+.settings/*
