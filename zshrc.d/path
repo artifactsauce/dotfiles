@@ -1,8 +1,6 @@
 while read; do
   PATH="$REPLY:$PATH"
 done <<EOD
-/usr/local/bin
-/usr/local/sbin
 /usr/local/opt/curl/bin
 /usr/local/opt/flutter/bin
 $GOPATH/bin
