@@ -3,25 +3,27 @@
 ## Requires
 
 - git
-- bash
+- zsh
 
 ## Recommends
 
-- zsh
-- rbenv
-- pyenv
-- plenv
-- nvm
-- emacs
+- brew
 - tmux
+- peco
+- siege
+- rbenv
+- java
+- google cloud sdk
+- android sdk
+- android ndk
 
 ## Installation
 
 Execute this command.
 
 ```console
-$ curl -L https://raw.githubusercontent.com/artifactsauce/dotfiles/master/bin/install | bash
+$ git clone https://github.com/artifactsauce/dotfiles.git
+$ cd dotfiles
+$ ./bin/init
+$ ./bin/prezto.init
 ```
-
-The environment variable, `$DEPLOY_DIRECTORY`, can be set.
-The default value is the current directory.
