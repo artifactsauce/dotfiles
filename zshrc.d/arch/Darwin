@@ -16,3 +16,4 @@ fi
 launchctl setenv GOPATH $HOME
 
 alias excel='open -a "Microsoft Excel"'
+alias ls='gls --group-directories-first --color=auto'
