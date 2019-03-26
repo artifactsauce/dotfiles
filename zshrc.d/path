@@ -9,4 +9,5 @@ $HOME/Dropbox/vendor/bin/$(uname)
 $HOME/src/github.com/artifactsauce/proglets/bin
 $HOME/src/gitlab.com/artifactsauce/proglets/bin
 $HOME/src/gitlab.unext.in/k-akiyama/proglets/bin
+$HOME/.pub-cache/bin
 EOD
