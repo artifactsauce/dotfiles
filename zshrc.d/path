@@ -2,7 +2,7 @@ while read; do
   PATH="$REPLY:$PATH"
 done <<EOD
 /usr/local/sbin
-/usr/local/opt/curl/bin
+/usr/local/opt/coreutils/libexec/gnubin
 /usr/local/opt/flutter/bin
 $GOPATH/bin
 $HOME/Dropbox/vendor/bin

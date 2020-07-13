@@ -28,6 +28,7 @@ cmdinit
 interpreter
 functions
 peco
+curl
 arch/$(uname)
 EOF
 
