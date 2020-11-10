@@ -22,6 +22,7 @@ path
 cmdinit
 interpreter
 functions
+completion
 command
 peco
 curl
