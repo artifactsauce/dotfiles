@@ -1,2 +1,1 @@
 if type direnv  &> /dev/null; then eval "$(direnv hook zsh)"; fi
-if [ -f "$HOME/.travis/travis.sh" ]; then source $HOME/.travis/travis.sh; fi
