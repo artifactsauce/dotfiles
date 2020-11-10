@@ -23,6 +23,7 @@ cmdinit
 interpreter
 functions
 completion
+alias
 command
 peco
 curl
