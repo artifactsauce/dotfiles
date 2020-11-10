@@ -15,11 +15,6 @@ fi
 
 export GOPATH=$HOME
 
-if type hub     &> /dev/null; then eval "$(hub alias -s)"; fi
-if type direnv  &> /dev/null; then eval "$(direnv hook zsh)"; fi
-if type bundle  &> /dev/null; then alias be="bundle exec"; fi
-if [ -f "$HOME/.travis/travis.sh" ]; then source $HOME/.travis/travis.sh; fi
-
 while read; do
   [ -f "$HOME/.zshrc.d/$REPLY" ] && source $HOME/.zshrc.d/$REPLY
 done <<EOF
@@ -27,6 +22,7 @@ path
 cmdinit
 interpreter
 functions
+command
 peco
 curl
 arch/$(uname)
