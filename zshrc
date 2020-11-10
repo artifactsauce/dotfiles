@@ -23,10 +23,10 @@ interpreter
 functions
 completion
 alias
-command
 subinit
 peco
 curl
+direnv
 arch/$(uname)
 EOF
 
