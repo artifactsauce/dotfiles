@@ -19,12 +19,12 @@ while read; do
   [ -f "$HOME/.zshrc.d/$REPLY" ] && source $HOME/.zshrc.d/$REPLY
 done <<EOF
 path
-cmdinit
 interpreter
 functions
 completion
 alias
 command
+subinit
 peco
 curl
 arch/$(uname)
