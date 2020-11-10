@@ -20,7 +20,6 @@ while read; do
 done <<EOF
 path
 interpreter
-functions
 completion
 alias
 subinit
@@ -28,6 +27,7 @@ peco
 curl
 direnv
 arch/$(uname)
+command
 EOF
 
 HIDDEN_ENV_FILE="~/Dropbox/conf/hidden_env.rc"
