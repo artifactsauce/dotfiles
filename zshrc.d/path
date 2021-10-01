@@ -6,7 +6,7 @@ done <<EOD
 /usr/local/opt/flutter/bin
 $GOPATH/bin
 $HOME/Dropbox/vendor/bin
-$HOME/Dropbox/vendor/bin/$(uname)
+$HOME/Dropbox/vendor/$(uname)/bin
 $HOME/src/github.com/artifactsauce/proglets/bin
 $HOME/src/gitlab.com/artifactsauce/proglets/bin
 $HOME/src/github.com/u-next/proglets/bin
