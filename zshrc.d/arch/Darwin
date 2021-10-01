@@ -1,5 +1,5 @@
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
-export JAVA_HOME=$(/usr/libexec/java_home -v 15)
+export JAVA_HOME=$(/usr/libexec/java_home -v 16)
 export STUDIO_JDK="$JAVA_HOME"
 export ANDROID_HOME=/usr/local/share/android-sdk
 export ANDROID_SDK_ROOT="/usr/local/share/android-sdk"
