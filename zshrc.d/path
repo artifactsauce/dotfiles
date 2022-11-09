@@ -4,6 +4,7 @@ done <<EOD
 /usr/local/sbin
 /usr/local/opt/coreutils/libexec/gnubin
 /usr/local/opt/flutter/bin
+/usr/local/opt/mysql@5.7/bin/mysql
 $GOPATH/bin
 $HOME/Dropbox/vendor/bin
 $HOME/Dropbox/vendor/$(uname)/bin
