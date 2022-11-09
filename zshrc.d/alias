@@ -1,2 +1,3 @@
 if type hub     &> /dev/null; then eval "$(hub alias -s zsh)"; fi
 if type bundle  &> /dev/null; then alias be="bundle exec"; fi
+if type uuidgen &> /dev/null; then alias uuidgen='uuidgen | tr "[:upper:]" "[:lower:]"'; fi
