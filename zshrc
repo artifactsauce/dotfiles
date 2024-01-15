@@ -12,8 +12,9 @@ export LESS='-R'
 if which -s src-hilite-lesspipe.sh > /dev/null; then
   export LESSOPEN='| '$(which src-hilite-lesspipe.sh)' %s'
 fi
-
 export GOPATH=$HOME
+export GOPROXY=direct
+export GOSUMDB=off
 
 while read; do
   [ -f "$HOME/.zshrc.d/$REPLY" ] && source $HOME/.zshrc.d/$REPLY
